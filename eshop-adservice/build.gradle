@@ -1,0 +1,45 @@
+plugins {
+     id 'org.springframework.boot' version '2.2.6.RELEASE'
+     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+     id 'java'
+     id 'com.google.cloud.tools.jib' version '2.7.0'
+         // Asciidoctor 적용
+    id 'org.asciidoctor.jvm.convert' version '3.3.2' //:point_left::point_left:  add line
+}
+jib{
+     container {
+         creationTime = 'USE_CURRENT_TIMESTAMP'
+     }
+}
+group = 'com.samsungsds'
+version = '0.0.2-SNAPSHOT'
+sourceCompatibility = '11'
+configurations {
+    asciidoctorExtensions // dependencies 에서 적용한 것 추가
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.postgresql:postgresql'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'com.google.guava:guava:28.2-jre'
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.platform:junit-platform-engine:1.8.2'
+    testImplementation 'org.junit.platform:junit-platform-commons:1.8.2'
+    // mockMvc를 사용해서 snippets를 추출
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc' //:point_left::point_left:  add line
+    // 병합된 .adoc파일을 HTML로 export
+    asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor' //:point_left::point_left:  add line
+    // Json 관련 작업을 위한 라이브러리 추가.
+    implementation 'com.google.code.gson:gson' //:point_left::point_left:  add line
+}

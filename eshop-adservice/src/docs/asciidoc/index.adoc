@@ -1,0 +1,77 @@
+= E-SHOP API Documentation
+E-SHOP API Documentation
+:source-highlighter: highlightjs
+:toc: left
+:toc-title: Table of Contents
+:toclevels: 2
+:sectnums:
+:sectlinks:
+
+[[AD-API]]
+== AD API
+
+[[AD-random-search]]
+=== AD random search
+operation::get-ad-random[snippets='http-request,http-response,response-fields']
+
+[[AD-category-ID-search]]
+=== AD category ID search
+operation::get-ad-by-category[snippets='http-request,path-parameters,http-response,response-fields']
+
+[[CARTS-API]]
+== CARTS API
+
+[[CART-add]]
+=== CART-add
+operation::post-add-carts[snippets='http-request,request-fields,http-response']
+
+[[CART-lookup]]
+=== CART-lookup
+operation::get-carts[snippets='http-request,http-response,response-fields']
+
+[[CART-empty]]
+=== CART-empty
+operation::post-empty-carts[snipp ets='http-request,http-response']
+
+[[CART-count-lookup]]
+=== CART-count-lookup
+operation::get-count-carts[snippets='http-request,http-response']
+
+[[CURRENCIES-API]]
+== CURRENCIES API
+
+[[CURRENCIES-lookup]]
+=== CURRENCIES-lookup
+operation::get-currencies[snippets='http-request,http-response,response-fields']
+
+[[ORDERS-API]]
+== ORDERS API
+
+[[ORDERS-create]]
+=== ORDERS-create
+operation::post-orders[snippets='http-request,request-fields,http-response,response-fields']
+
+[[PRODUCTS-API]]
+== PRODUCTS API
+
+[[PRODUCTS-Multiple Item-Search]]
+=== PRODUCTS-Multiple Item-Search
+operation::get-products[snippets='http-request,request-parameters,http-response,response-fields']
+
+[[PRODUCTS-Single Item-Search]]
+=== PRODUCTS-Single Item-Search
+operation::get-products-by-id[snippets='http-request,path-parameters,http-response,response-fields']
+
+[[RECOMMENDS-API]]
+== RECOMMENDS API
+
+[[RECOMMENDS-product-lookup]]
+=== RECOMMENDS-product-lookup
+operation::get-recommends[snippets='http-request,http-response, response-fields']
+
+[[SHIPPING-API]]
+== SHIPPING API
+
+[[SHIPPING-cost-calculation]]
+=== SHIPPING-cost-calculation
+operation::post-shipping-cost[snippets='http-request,request-fields,http-response,response-fields']
