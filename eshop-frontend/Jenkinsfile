@@ -15,7 +15,7 @@ spec:
     }
   }
   environment {
-    IMAGE_REGISTRY = "<< ECR URI >>"
+    IMAGE_REGISTRY = "306798326015.dkr.ecr.us-east-1.amazonaws.com"
   }
   stages {
     stage('Build with Kaniko') {
@@ -26,7 +26,7 @@ spec:
             /kaniko/executor \
             --git branch=main \
             --context=. \
-            --destination=${IMAGE_REGISTRY}/eshop-frontend:<< TAG >>
+            --destination=${IMAGE_REGISTRY}/eshop/frontend:0.0.1
             '''   
           }
         }
