@@ -21,7 +21,7 @@ spec:
     }
   }
   environment {
-    IMAGE_REGISTRY = 306798326015.dkr.ecr.us-east-1.amazonaws.com
+    IMAGE_REGISTRY = "306798326015.dkr.ecr.us-east-1.amazonaws.com"
   }
   stages {
     stage('Build with Kaniko') {
