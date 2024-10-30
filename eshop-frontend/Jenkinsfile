@@ -21,7 +21,7 @@ spec:
     stage('Build with Kaniko') {
       steps {
         container(name: 'kaniko', shell: '/busybox/sh') {
-          dir('eshop-currencyservice') {
+          dir('eshop-fronted') {
             sh '''#!/busybox/sh
             /kaniko/executor \
             --git branch=main \
