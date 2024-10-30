@@ -6,7 +6,7 @@ module.exports = {
     //       target: "http://localhost:8090"
     //     }
     // },
-    disableHostCheck: true
+    // disableHostCheck: true
   }}
 
   // EC2 OR Dockerize & skaffold
